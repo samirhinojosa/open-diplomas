@@ -17,10 +17,17 @@ docker-compose up
 docker-compose exec web bash 
 ```
 4.  If it is the first time, then 
-    -   In the project directory root, create a file called **".env"** with Django Secret Key
-    -   Create the database and database user based on opendiplomasproject.settings.development
+    -   In the project directory root, create a file called **".env"** with Django Secret Key, like the following example
+        ```python
+        SECRET_KEY=HERE_THE_DJANGO_SECRET_KEY
+        ```
+    -   Create the database and database user based on **opendiplomasproject.settings.development**
+        ```python
+        'NAME': 'od_db',
+        'USER': 'project',
+        'PASSWORD': 'project',
+        ```
 	-	Prepare the migrations based on the apps
-
         ```python
         python manage.py makemigrations --settings=opendiplomasproject.settings.development
         ```
@@ -46,8 +53,16 @@ docker-compose exec web bash
     - Python
 4.  Open the project in Visual Studio Code
 5.  If it is the first time, then
-    -   In the project directory root, create a file called **".env"** with Django Secret Key
-    -   Create the database and database user based on opendiplomasproject.settings.development
+    -   In the project directory root, create a file called **".env"** with Django Secret Key, like the following example
+        ```python
+        SECRET_KEY=HERE_THE_DJANGO_SECRET_KEY
+        ```
+    -   Create the database and database user based on **opendiplomasproject.settings.development**
+        ```python
+        'NAME': 'od_db',
+        'USER': 'project',
+        'PASSWORD': 'project',
+        ```
     -   In a Terminal, prepare the migrations based on the apps
         ```python
         python manage.py makemigrations --settings=opendiplomasproject.settings.development
