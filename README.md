@@ -17,6 +17,7 @@ docker-compose up
 docker-compose exec web bash 
 ```
 4.  If it is the first time, then 
+    -   In the project directory root, create a file called **".env"** with Django Secret Key
     -   Create the database and database user based on opendiplomasproject.settings.development
 	-	Prepare the migrations based on the apps
 
@@ -44,21 +45,22 @@ docker-compose exec web bash
     - Remote – Containers
     - Python
 4.  Open the project in Visual Studio Code
-5.  If it is the first time, then 
-    -  Create the database and database user based on opendiplomasproject.settings.development
-    -  In a Terminal, prepare the migrations based on the apps
+5.  If it is the first time, then
+    -   In the project directory root, create a file called **".env"** with Django Secret Key
+    -   Create the database and database user based on opendiplomasproject.settings.development
+    -   In a Terminal, prepare the migrations based on the apps
         ```python
         python manage.py makemigrations --settings=opendiplomasproject.settings.development
         ```
-    -  Make the migrations
+    -   Make the migrations
         ```python
         python manage.py migrate --settings=opendiplomasproject.settings.development
         ```
-    -  Create an admin user
+    -   Create an admin user
         ```python
         python manage.py createsuperuser --settings=opendiplomasproject.settings.development
         ```
-    -  Run the command
+    -   Run the command
         ```python
         python manage.py collectstatic --settings=opendiplomasproject.settings.development
         ```
