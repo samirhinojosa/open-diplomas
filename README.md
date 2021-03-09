@@ -12,22 +12,29 @@ Below you can see how to contribute to the project through Docker and Visual Stu
 ```docker
 docker-compose up
 ```
-3.  In another shell, prepare the migrations based on the apps
-```python
-python manage.py makemigrations 
+3. In another shell run the command below
+```docker
+docker-compose exec web bash 
 ```
-4.  Make the migrations
-```python
-python manage.py migrate 
-```
-5.  Create an admin user
-```python
-python manage.py createsuperuser 
-```
-6.  Run the command
-```python
-python manage.py collectstatic 
-```
+4.  If it is the first time, then 
+    -   Create the database and database user based on opendiplomasproject.settings.development
+	-	Prepare the migrations based on the apps
+
+        ```python
+        python manage.py makemigrations --settings=opendiplomasproject.settings.development
+        ```
+    -  Make the migrations
+        ```python
+        python manage.py migrate --settings=opendiplomasproject.settings.development
+        ```
+    -   Create an admin user
+        ```python
+        python manage.py createsuperuser --settings=opendiplomasproject.settings.development
+        ```
+    -  Run the command
+        ```python
+        python manage.py collectstatic --settings=opendiplomasproject.settings.development
+        ```
 
 ### With Visual Studio Code - Insiders
 1.  Install Docker and Docker Compose
@@ -37,21 +44,23 @@ python manage.py collectstatic
     - Remote – Containers
     - Python
 4.  Open the project in Visual Studio Code
-5.  In a Terminal, prepare the migrations based on the apps
-```python
-python manage.py makemigrations 
-```
-6.  Make the migrations
-```python
-python manage.py migrate 
-```
-7.  Create an admin user
-```python
-python manage.py createsuperuser
-```
-8.  Run the command
-```python
-python manage.py collectstatic 
-```
+5.  If it is the first time, then 
+    -  Create the database and database user based on opendiplomasproject.settings.development
+    -  In a Terminal, prepare the migrations based on the apps
+        ```python
+        python manage.py makemigrations --settings=opendiplomasproject.settings.development
+        ```
+    -  Make the migrations
+        ```python
+        python manage.py migrate --settings=opendiplomasproject.settings.development
+        ```
+    -  Create an admin user
+        ```python
+        python manage.py createsuperuser --settings=opendiplomasproject.settings.development
+        ```
+    -  Run the command
+        ```python
+        python manage.py collectstatic --settings=opendiplomasproject.settings.development
+        ```
 ---
 **Open Diplomas**  is an open source project, so contributing is as easy as forking the project on either of these sites and committing your enhancements. Please, don't forget include always tests. If you are fixing a bug, add a test that breaks before your patch and works after.
