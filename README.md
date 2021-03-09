@@ -3,19 +3,28 @@
 
 Simple **Backend** and **Back-office** application to manage the creation and granting of diplomas and badges through Django framework
 
-## Development and Contributing
+## **Development and Contributing**
 
 Below you can see how to contribute to the project through Docker and Visual Studio Code, always in development environment.
 
 1.  Install Docker and Docker Compose
-2.  In the project directory root, run the following command in shell
-```docker
-docker-compose up
-```
-3. In another shell run the command below
-```docker
-docker-compose exec web bash 
-```
+2. With a **Terminal** 
+    - In the project directory root, run the following command in shell
+        ```docker
+        docker-compose up
+        ```
+    - In another shell run the command below
+        ```docker
+        docker-compose exec web bash 
+        ```
+3. With **Visual Studio Code**
+    - Install Visual Studio Code
+    - Install the following extensions
+        - Docker
+        - Remote – Containers
+        - Python
+    - Open the project in Visual Studio Code
+
 4.  If it is the first time, then 
     -   In the project directory root, create a file called **".env"** with Django Secret Key, like the following example
         ```python
@@ -40,42 +49,6 @@ docker-compose exec web bash
         python manage.py createsuperuser --settings=opendiplomasproject.settings.development
         ```
     -  Run the command
-        ```python
-        python manage.py collectstatic --settings=opendiplomasproject.settings.development
-        ```
-
-### With Visual Studio Code - Insiders
-1.  Install Docker and Docker Compose
-2.  Install Visual Studio Code
-3.  Install the following extensions
-    - Docker
-    - Remote – Containers
-    - Python
-4.  Open the project in Visual Studio Code
-5.  If it is the first time, then
-    -   In the project directory root, create a file called **".env"** with Django Secret Key, like the following example
-        ```python
-        SECRET_KEY=HERE_THE_DJANGO_SECRET_KEY
-        ```
-    -   Create the database and database user based on **opendiplomasproject.settings.development**
-        ```python
-        'NAME': 'od_db',
-        'USER': 'project',
-        'PASSWORD': 'project',
-        ```
-    -   In a Terminal, prepare the migrations based on the apps
-        ```python
-        python manage.py makemigrations --settings=opendiplomasproject.settings.development
-        ```
-    -   Make the migrations
-        ```python
-        python manage.py migrate --settings=opendiplomasproject.settings.development
-        ```
-    -   Create an admin user
-        ```python
-        python manage.py createsuperuser --settings=opendiplomasproject.settings.development
-        ```
-    -   Run the command
         ```python
         python manage.py collectstatic --settings=opendiplomasproject.settings.development
         ```
