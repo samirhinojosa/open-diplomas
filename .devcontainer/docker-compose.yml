@@ -11,7 +11,7 @@ services:
     volumes:
       - ~/.gitconfig:/root/.gitconfig
       - ..:/workspace
-    command: python /workspace/manage.py runserver 0.0.0.0:8000 --settings=opendiplomasproject.settings.development
+    command: sleep infinity
     links:
       - 'db'
 

@@ -41,7 +41,7 @@ THIRD_PARTY_APPS = [
 ]
 
 PROJECT_APPS = [
-    
+    "apps.core",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
@@ -49,7 +49,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 #Order of Apps into the project
 
 APP_ORDER = [
-
+    "core",
 ]
 
 #Order of links into the admin´s views/templates
@@ -58,6 +58,10 @@ LINKS_ORDERING = {
     "Groups": 1,
     "Users": 2
 }
+
+# Custom user
+
+AUTH_USER_MODEL = "core.User"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
