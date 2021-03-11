@@ -41,6 +41,7 @@ THIRD_PARTY_APPS = [
 ]
 
 PROJECT_APPS = [
+    "apps.diplomas",
     "apps.core",
 ]
 
@@ -49,14 +50,16 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 #Order of Apps into the project
 
 APP_ORDER = [
+    "diplomas",
     "core",
 ]
 
 #Order of links into the admin´s views/templates
 
 LINKS_ORDERING = {
-    "Groups": 1,
-    "Users": 2
+    "Issuers": 1,
+    "Groups": 2,
+    "Users": 3
 }
 
 # Custom user

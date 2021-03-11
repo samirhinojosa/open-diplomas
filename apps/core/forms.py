@@ -8,7 +8,7 @@ class MyUserCreationForm(UserCreationForm):
     """
     class Meta(UserCreationForm):
         model = User
-        fields = ["username", "email"]
+        fields = ["email"]
 
 
 class MyUserChangeForm(UserChangeForm):
@@ -17,4 +17,4 @@ class MyUserChangeForm(UserChangeForm):
     """
     class Meta:
         model = User
-        fields = ["username", "email"]
+        fields = ["email"]

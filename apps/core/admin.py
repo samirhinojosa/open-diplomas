@@ -3,8 +3,8 @@ from django.conf import settings
 from django.apps import apps
 from django.http import Http404
 from django.contrib.admin import AdminSite
-from django.utils.translation import gettext as _
 from django.template.response import TemplateResponse
+from django.utils.translation import gettext as _
 from .models import User, ProxyUser, ProxyGroup
 from .admins.users import MyUserAdmin
 

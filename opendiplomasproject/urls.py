@@ -11,6 +11,7 @@ OPEN_DIPLOMAS_ADMIN_SITE.index_title = "Welcome to Open Diplomas"
 
 urlpatterns = [
     path("", include("apps.core.urls"), name="core"),
+    path("diplomas/", include("apps.diplomas.urls"), name="diplomas"),
     path("myadmin/", OPEN_DIPLOMAS_ADMIN_SITE.urls),
 ]
 

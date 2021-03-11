@@ -11,6 +11,7 @@
             "program": "${workspaceFolder}/manage.py",
             "args": [
                 "runserver",
+                "--settings=opendiplomasproject.settings.development",
                 "--noreload"
             ],
             "django": true
